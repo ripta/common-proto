@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package geometry;
+option go_package = "github.com/ripta/common-proto/geometry";
+
+message Box {
+  Point p1 = 1;
+  Point p2 = 2;
+}
+
+message Circle {
+  Point center = 1;
+  double radius = 2;
+}
+
+message Line {
+  Point p1 = 1;
+  Point p2 = 2;
+}
+
+message Point {
+  double x = 1;
+  double y = 2;
+}
