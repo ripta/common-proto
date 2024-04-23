@@ -1,3 +1,12 @@
+generate:
+	protoc \
+		--go_out=. \
+		--go_opt=paths=source_relative \
+		--go-grpc_out=. \
+		--go-grpc_opt=paths=source_relative \
+		geometry/geometry.proto
+	goimports -w -l -local github.com/ripta/common-proto .
+
 install-gimports:
 	go install golang.org/x/tools/cmd/goimports@latest
 
