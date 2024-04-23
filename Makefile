@@ -1,3 +1,7 @@
+ci:
+	go vet ./...
+	go test ./...
+
 generate:
 	protoc \
 		--go_out=. \
